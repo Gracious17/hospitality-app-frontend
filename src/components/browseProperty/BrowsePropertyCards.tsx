@@ -6,8 +6,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 // import { ArrowLeft, ArrowRight } from "lucide-react";
-import cityImg from "../../../public/city.png";
-// import Image from "next/image";
+import Image from "next/image";
 type EmblaOptions = {
   align?: "start" | "center" | "end";
   loop?: boolean;
@@ -25,16 +24,35 @@ const emblaOptions: EmblaOptions = {
 // will be replced with actual data
 
 const destinations = [
-  { id: 1, city: "Lagos", hotels: "201 Hotels", img: `${cityImg}` },
-  { id: 2, city: "Abuja", hotels: "201 Hotels", img: `${cityImg}` },
-  { id: 3, city: "Ikeja", hotels: "201 Hotels", img: `${cityImg}` },
-  { id: 4, city: "Lekki", hotels: "201 Hotels", img: `${cityImg}` },
-  { id: 5, city: "Ibadan", hotels: "201 Hotels", img: `${cityImg}` },
+  {
+    id: 1,
+    hotels: "Appartment",
+    img: "https://images.unsplash.com/photo-1517480448885-d5c53555ba8c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE5fHxiZWFjaHxlbnwwfHwwfHx8MA%3D%3D",
+  },
+  {
+    id: 2,
+    hotels: "Hotels & Suites",
+    img: "https://images.unsplash.com/photo-1517480448885-d5c53555ba8c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE5fHxiZWFjaHxlbnwwfHwwfHx8MA%3D%3D",
+  },
+  {
+    id: 3,
+    hotels: "Resorts",
+    img: "https://images.unsplash.com/photo-1517480448885-d5c53555ba8c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE5fHxiZWFjaHxlbnwwfHwwfHx8MA%3D%3D",
+  },
+  {
+    id: 4,
+    hotels: "Guest House",
+    img: "https://images.unsplash.com/photo-1517480448885-d5c53555ba8c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE5fHxiZWFjaHxlbnwwfHwwfHx8MA%3D%3D",
+  },
+  {
+    id: 5,
+    hotels: "201 Hotels",
+    img: "https://images.unsplash.com/photo-1517480448885-d5c53555ba8c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE5fHxiZWFjaHxlbnwwfHwwfHx8MA%3D%3D",
+  },
   {
     id: 6,
-    city: "Benin City",
     hotels: "201 Hotels",
-    img: "../../public/city.png",
+    img: "https://images.unsplash.com/photo-1517480448885-d5c53555ba8c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE5fHxiZWFjaHxlbnwwfHwwfHx8MA%3D%3D",
   },
 ];
 
@@ -93,16 +111,17 @@ export function BrowsePropertyCards() {
               className="basis-1/1 sm:basis-1/2 md:basis-1/3 lg:basis-1/4" // Controls responsive sizing
             >
               <div className="overflow-hidden rounded-xl shadow-lg">
-                {/* <Image
-                    src={dest.img}
-                    alt={dest.city}
-                    width={300}
-                    height={200}
-                    className="w-full h-48 object-cover"
-                  /> */}
-                <div className="p-12 bg-white text-center">
-                  <h3 className="text-md font-medium">{dest.city}</h3>
-                  <p className="text-sm text-gray-500">{dest.hotels}</p>
+                <Image
+                  src={dest.img}
+                  alt={dest.hotels}
+                  width={300}
+                  height={200}
+                  className="w-full h-48 object-cover"
+                />
+                <div className=" bg-white text-left  shadow-lg  shadow-black/80">
+                  <p className="text-sm text-gray-500 ml-4 pt-2">
+                    {dest.hotels}
+                  </p>
                 </div>
               </div>
             </CarouselItem>

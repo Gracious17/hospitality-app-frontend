@@ -5,12 +5,12 @@ import CusIcon from "../../../public/image 35.png";
 
 const CustomerExpLay = () => {
   return (
-    <div className="pt-[5rem] pb-[3rem]">
+    <div className="pt-4 pb-[3rem]">
       {/* <SectionHeading
         headingMini="Ideal Soluiton For You"
         headingPrimary="Explore Ultimate Features"
       /> */}
-      <div className="pt-[5rem] w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-[1.4rem]">
+      <div className="pt-4 w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-[1.4rem]">
         <div data-aos="zoom-in" data-aos-anchor-placement="top-center">
           <FeatureCard
             title="Seamless Booking Experience"

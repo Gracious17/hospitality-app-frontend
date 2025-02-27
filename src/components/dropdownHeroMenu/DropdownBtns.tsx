@@ -54,7 +54,7 @@ const DropdownBtns = () => {
             <div key={index} className="relative bg-transparent">
               <button
                 onClick={() => toggleDropdown(index)}
-                className={`w-full flex items-center group gap-2 px-5 py-3 text-white bg-transparent  transition-all duration-300 hover:bg-white hover:text-black ${uniqueStyle}`}
+                className={`w-full flex  backdrop-blur-md items-center group gap-2 px-5 py-3 text-white bg-transparent  transition-all duration-300 hover:bg-white hover:text-black ${uniqueStyle}`}
               >
                 <IconComponent
                   className="text-white group-hover:text-[#5627FF] transition-colors duration-300"

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import footerIcon from "@/../public/Kakrol.png";
+import CurrencySelect from "../currencyDropdown/CurrencySelect";
 const Footer = () => {
   return (
     <div className="pt-[3rem] pb-[3rem] bg-[#F5F5F5]">
@@ -64,20 +65,12 @@ const Footer = () => {
         </div>
         {/* 4th footer info */}
         <div className="md:mx-auto mx-0">
-          <h1 className="text-[17px] text-gray-900 font-semibold mb-[1.5rem] cursor-context-menu">
+          <h1 className="text-[17px] text-gray-900 font-semibold mb-[0.7rem] cursor-context-menu">
             Currency
           </h1>
 
           <p className="text-black opacity-80 mb-[1rem] text-[15px]">
-            <select
-              title="select"
-              className="p-2 border border-gray-300 rounded-md"
-            >
-              <option> United States</option>
-              <option>🇬🇧 United Kingdom</option>
-              <option>🇳🇬 Nigeria</option>
-              <option>🇨🇦 Canada</option>
-            </select>
+            <CurrencySelect />
           </p>
         </div>
       </div>

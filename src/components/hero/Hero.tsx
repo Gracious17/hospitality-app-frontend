@@ -7,7 +7,7 @@ const Hero = () => {
       style={{ backgroundImage: "url('/hero.png')" }}
     >
       {/* Overlay */}
-      <div className="absolute sm:w-[50%] w-[40%] md:w-[65%] lg:w-[33%] h-[8vh] rounded-t-md bg-white/40 mt-4 bottom-0 z-0"></div>
+      <div className="absolute   sm:w-[50%] w-[100%] md:w-[65%] lg:w-[33%] h-[8vh] rounded-t-md bg-white/40 mt-4 bottom-0 z-0"></div>
 
       <div className="absolute w-full h-[40vh] rounded-t-md bg-black/40 mt-4 bottom-0 "></div>
       <div className="pt-10 relative z-10">

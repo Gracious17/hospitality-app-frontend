@@ -5,14 +5,17 @@ import { AlignRight } from "lucide-react";
 import ButtonBorderBlue from "../button/ButtonBorderBlue";
 import Image from "next/image";
 import navIcon from "@/../public/Kakrol.png";
+import FlagDropDown from "./dropDown/FlagDropDown";
+import LanguageSelect from "../langDropDown/LangDrop";
+import NgnDropDown from "../langDropDown/NgnDropDown";
 interface props {
   openNav: () => void;
 }
 const Navbar = ({ openNav }: props) => {
   return (
     // first nav
-    <div className="h-[10vh] bg-white shadow-md">
-      <div className="w-[90%] flex items-center justify-between mx-auto h-[13vh]">
+    <div className="h-[10vh] bg-white shadow-md w-full">
+      <div className="w-[100%] flex items-center justify-around mx-auto h-[13vh]">
         <div className="flex items-center">
           <h1 className="text-[16px] md:text-[25px] font-bold text-slate-800 flex items-center">
             <span>
@@ -40,23 +43,24 @@ const Navbar = ({ openNav }: props) => {
             <Link href="#">Events</Link>
           </li>
         </ul>
-        <div className="flex space-x-2 md:space-x-5">
-          <select
-            title="select"
-            className="p-2 border border-gray-300 rounded-md"
-          >
-            <option> United States</option>
-            <option>🇬🇧 United Kingdom</option>
-            <option>🇳🇬 Nigeria</option>
-            <option>🇨🇦 Canada</option>
-          </select>
+        <div className="flex  md:space-x-5">
+          <FlagDropDown />
+          <LanguageSelect />
+          <NgnDropDown />
           {/* LogIn */}
           <ButtonBorderBlue text="SignIn" />
           {/* SignUp */}
           <ButtonBlue text="SignUp" />
+          {/* Authenticated user profile image  on the nav */}
+          <div className="flex  items-center text-center mb-2">
+            <div className=" rounded-full p-4 bg-blue-400">
+              <Image src={""} width={20} height={20} alt="" />
+            </div>
+            <p>Solish OluwaSeun</p>
+          </div>
           <AlignRight
             onClick={openNav}
-            className="w-[3.5rem] lg:hidden h-[1.5rem] text-slate-900 cursor-pointer"
+            className="w-[3.5rem] md lg:hidden h-[1.5rem] text-slate-900 cursor-pointer"
           />
         </div>
       </div>
