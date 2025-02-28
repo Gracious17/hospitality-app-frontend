@@ -4,7 +4,7 @@ import footerIcon from "@/../public/Kakrol.png";
 import CurrencySelect from "../currencyDropdown/CurrencySelect";
 const Footer = () => {
   return (
-    <div className="pt-[3rem] pb-[3rem] bg-[#F5F5F5]">
+    <div className="pt-[3rem] pb-[3rem] bg-[#F5F5F5] ">
       <div className="w-[80%] mx-auto grid grid-cols-1 border-b-[1.5px] border-b-slate-300 pb-[2rem] md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[2rem] items-start">
         {/* first footer info */}
         <div className="md:mx-auto mx-0">

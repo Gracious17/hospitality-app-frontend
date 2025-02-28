@@ -25,7 +25,9 @@ export default function RootLayout({
       <body className={lilyScript.variable}>
         <Navbar />
         {children}
-        <Footer />
+        <div className="bottom-0">
+          <Footer />
+        </div>
       </body>
     </html>
   );

@@ -7,13 +7,13 @@ import { PopularHotels } from "@/components/popularHotels/PopularHotels";
 import GetInspired from "@/components/getInspired/GetInspired";
 import TrendDestination from "@/components/hotelFlightList/TrendDestination";
 import FlightToPopularArea from "@/components/hotelFlightList/FlightToPopularArea";
-import SearchBar from "@/components/heroSearchBar/HeroSearch";
+// import SearchBar from "@/components/heroSearchBar/HeroSearch";
 export default function Home() {
   return (
     <div className="overflow-hidden">
       {/* <h1 className="text-green-500  animate-pulse">Navbar Coming Soon...</h1> */}
       <Hero />
-      <SearchBar />
+      {/* <SearchBar /> */}
       <CustomerExpLay />
       <PopularHotels />
       <TrendyHotelCarousel />
