@@ -11,9 +11,7 @@ import FlightToPopularArea from "@/components/hotelFlightList/FlightToPopularAre
 export default function Home() {
   return (
     <div className="overflow-hidden">
-      {/* <h1 className="text-green-500  animate-pulse">Navbar Coming Soon...</h1> */}
       <Hero />
-      {/* <SearchBar /> */}
       <CustomerExpLay />
       <PopularHotels />
       <TrendyHotelCarousel />

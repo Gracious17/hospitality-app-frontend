@@ -8,6 +8,8 @@ import navIcon from "@/../public/Kakrol.png";
 import FlagDropDown from "./dropDown/FlagDropDown";
 import LanguageSelect from "../langDropDown/LangDrop";
 import NgnDropDown from "../langDropDown/NgnDropDown";
+import hotelImage from "../../../public/pixasquare-4ojhpgKpS68-unsplash.jpg";
+
 interface props {
   openNav: () => void;
 }
@@ -54,7 +56,7 @@ const Navbar = ({ openNav }: props) => {
           {/* Authenticated user profile image  on the nav */}
           <div className="flex  items-center text-center mb-2">
             <div className=" rounded-full p-4 bg-blue-400">
-              <Image src={""} width={20} height={20} alt="" />
+              <Image src={hotelImage} width={20} height={20} alt="" />
             </div>
             <p>Solish OluwaSeun</p>
           </div>
