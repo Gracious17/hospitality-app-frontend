@@ -1,10 +1,10 @@
 "use client";
 import { useState } from "react";
-import HotelsDropDown from "../hotelOnHero/HotelDropDown";
 import FlightDropDown from "../flightOnHero/FlightDropDown";
 import CarRentalDropDown from "../carRentalOnHero/CarRentalDropDown";
 import EventsDropDown from "../eventsOnHero/EventsDropDown";
 import { Hotel, Plane, Car, Calendar } from "lucide-react"; // Import icons
+import HeroSearch from "../heroSearchBar/HeroSearch";
 
 const DropdownBtns = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -13,7 +13,7 @@ const DropdownBtns = () => {
   const dropdownItems = [
     {
       title: "Hotels",
-      component: <HotelsDropDown />,
+      component: <HeroSearch />,
       icon: Hotel,
     },
     {
@@ -40,7 +40,7 @@ const DropdownBtns = () => {
   return (
     <div className="w-full flex flex-col items-center">
       {/* drop down btns */}
-      <div className="flex space-x-4  ">
+      <div className="flex space-x-4  w-full  items-center justify-center">
         {dropdownItems.map((item, index) => {
           const IconComponent = item.icon;
           const uniqueStyle =
@@ -51,7 +51,7 @@ const DropdownBtns = () => {
               : "";
 
           return (
-            <div key={index} className="relative bg-transparent">
+            <div key={index} className="relative bg-transparent ">
               <button
                 onClick={() => toggleDropdown(index)}
                 className={`w-full flex  backdrop-blur-md items-center group gap-2 px-5 py-3 text-white bg-transparent  transition-all duration-300 hover:bg-white hover:text-black ${uniqueStyle}`}
@@ -64,7 +64,7 @@ const DropdownBtns = () => {
               </button>
               {/* drop down component */}
               {openIndex === index && (
-                <div className="absolute left-0 mt-1 w-56 bg-white border border-gray-200 rounded-md shadow-lg p-2 ">
+                <div className="absolute left-0 mt-1 text-black   bg-white    rounded-md shadow-lg z-[200]  w-[50rem]">
                   {item.component}
                 </div>
               )}

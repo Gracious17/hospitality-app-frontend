@@ -97,7 +97,6 @@ const HotelListing = () => {
             </div>
           </div>
           <FilterDropdown />
-          Left
         </div>
 
         {/* Right section  containers */}

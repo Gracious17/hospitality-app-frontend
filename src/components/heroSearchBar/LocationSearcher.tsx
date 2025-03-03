@@ -12,6 +12,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { MapPin } from "lucide-react";
 
 const locations = [
   "Ogun, Nigeria",
@@ -36,7 +37,7 @@ export default function LocationSearch() {
           {selected || "Where to?"}
         </button>
       </PopoverTrigger>
-      <PopoverContent className="w-full p-2">
+      <PopoverContent className="w-full p-2 z-[200]">
         <Command>
           <CommandInput
             value={query}
@@ -52,7 +53,12 @@ export default function LocationSearch() {
                   setOpen(false);
                 }}
               >
-                {location}
+                <div className="flex group">
+                  <span className="bg-[#E6E7E6] text-2xl p-3 rounded-sm group-hover:shadow-none shadow-md mr-2 group-hover:text-[#5627FF]">
+                    <MapPin className="" />
+                  </span>
+                  <span>{location}</span>
+                </div>
               </CommandItem>
             ))}
           </CommandList>

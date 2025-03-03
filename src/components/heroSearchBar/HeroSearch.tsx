@@ -3,7 +3,7 @@ import DatePicker from "./DatePicker";
 import GuestRoomSelector from "./GuestRoomSelector";
 import { Search } from "lucide-react";
 
-function SearchBar() {
+function HeroSearch() {
   return (
     <div className="flex flex-wrap gap-2 bg-white p-4 rounded-lg shadow-md">
       <div className="w-full sm:w-1/4">
@@ -16,7 +16,7 @@ function SearchBar() {
         <GuestRoomSelector />
       </div>
       <button className="bg-[#5627FF] text-white p-2 rounded-md md:px-8  w-full sm:w-auto">
-        <span className="flex text-center items-center">
+        <span className="flex text-center items-center sm:justify-center">
           <Search size={15} />
           Search
         </span>
@@ -24,4 +24,4 @@ function SearchBar() {
     </div>
   );
 }
-export default SearchBar;
+export default HeroSearch;

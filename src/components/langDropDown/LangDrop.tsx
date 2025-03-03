@@ -15,7 +15,7 @@ const languages = [
 
 export default function LanguageSelect() {
   return (
-    <div className="border-r-2 ">
+    <div className="border-r-2">
       <Select>
         <SelectTrigger className="relative w-[70px] bg-transparent  border-none  outline-none pr-4">
           <SelectValue />
