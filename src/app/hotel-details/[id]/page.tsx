@@ -100,8 +100,8 @@ const Page = () => {
 
           <p className="leading-relaxed text-base md:text-[17px]">
             Murtala Muhammed International Airport is a 50-minute drive from Eko
-            Hotels & Suites. The hotel's multilingual staff ensures every guest
-            enjoys a comfortable stay.
+            Hotels & Suites. The hotel&apos;s multilingual staff ensures every
+            guest enjoys a comfortable stay.
           </p>
 
           <div className="pt-5">

@@ -25,7 +25,7 @@ export default function GuestRoomSelector() {
           {rooms.reduce((sum, r) => sum + r.adults + r.children, 0)} Guests
         </button>
       </PopoverTrigger>
-      <PopoverContent className="w-64 p-4">
+      <PopoverContent className="w-64 p-4 z-[200]">
         {rooms.map((room, index) => (
           <div key={index} className="mb-2 border-b pb-2">
             <p className="font-semibold">Room {index + 1}</p>

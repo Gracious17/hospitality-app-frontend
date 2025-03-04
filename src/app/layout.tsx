@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Lily_Script_One } from "next/font/google";
 import Footer from "@/components/footer/Footer";
-import Navbar from "@/components/navigation/Navbar";
+
 import Providers from "@/components/Providers"; // Import the new Providers component
+
+import ResponsiveNav from "@/components/navigation/ResponsiveNav";
 
 const lilyScript = Lily_Script_One({
   subsets: ["latin"],
@@ -25,7 +27,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={lilyScript.variable}>
         <Providers>
-          <Navbar />
+          <ResponsiveNav />
           {children}
           <div className="bottom-0">
             <Footer />
