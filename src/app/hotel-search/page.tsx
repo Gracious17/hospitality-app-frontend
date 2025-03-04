@@ -19,7 +19,7 @@ import React from "react";
 
 const Page = () => {
   const searchParams = useSearchParams();
-  const location = searchParams.get("location") || "";
+  const location = searchParams.get("state") || "";
   const minPrice = Number(searchParams.get("minPrice")) || 0;
   const maxPrice = Number(searchParams.get("maxPrice")) || Infinity;
   const rating = Number(searchParams.get("rating")) || 0;

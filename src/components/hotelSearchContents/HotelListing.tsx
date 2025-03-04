@@ -188,9 +188,11 @@ const HotelListing: React.FC<HotelListingProps> = ({
       console.error("mockHotels is not an array:", mockHotels);
       return;
     }
-    const filtered = location
+    const filtered = Array.isArray(mockHotels)
       ? mockHotels.filter((hotel) =>
-          hotel.location.toLowerCase().includes(location.toLowerCase())
+          location
+            ? hotel.location.toLowerCase().includes(location.toLowerCase())
+            : true
         )
       : "";
     console.log(filtered);
