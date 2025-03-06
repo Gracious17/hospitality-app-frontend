@@ -8,8 +8,6 @@ import navIcon from "@/../public/Kakrol.png";
 import FlagDropDown from "./dropDown/FlagDropDown";
 import LanguageSelect from "../langDropDown/LangDrop";
 import NgnDropDown from "../langDropDown/NgnDropDown";
-import hotelImage from "../../../public/pixasquare-4ojhpgKpS68-unsplash.jpg";
-
 import profile from "@/../public/profile.png";
 interface props {
   openNav: () => void;
@@ -17,10 +15,10 @@ interface props {
 const Navbar = ({ openNav }: props) => {
   return (
     // first nav
-    <div className="h-[10vh] bg-white shadow-md w-full">
-      <div className="w-[100%] flex items-center justify-between lg:justify-around md:justify-around  mx-auto h-[13vh]">
+    <div className="h-[10vh] bg-white shadow-md w-full items-center mb-2">
+      <div className="w-[100%] flex items-center  text-center justify-between lg:justify-around md:justify-around  mx-auto h-[13vh]">
         <div className="flex items-center">
-          <h1 className="text-[16px] md:text-[25px] font-bold text-slate-800 flex items-center">
+          <h1 className="text-[16px] md:text-[25px] font-bold text-slate-800 flex items-center lg:pb-4">
             <span>
               <Image src={navIcon} width={30} height={30} alt="nav icon" />
             </span>
@@ -32,53 +30,47 @@ const Navbar = ({ openNav }: props) => {
         </div>
         {/* larger screen nav list */}
         <ul className="hidden lg:flex items-center space-x-10">
-          <li className="hover:border-b-4  cursor-pointer border-[#5627FF] pb-6 hover:text-[#5627FF]">
-            <Link href="#">Hotels</Link>
+          <li className="hover:border-b-4  rounded-full cursor-pointer border-[#5627FF] pb-5 hover:text-[#5627FF] transition-all duration-500">
+            <Link href="/">Hotels</Link>
           </li>
-          <li className="hover:border-b-4  cursor-pointer border-[#5627FF] pb-6 hover:text-[#5627FF]">
+          <li className="hover:border-b-4 rounded-full  cursor-pointer border-[#5627FF] pb-5 hover:text-[#5627FF] transition-all duration-500">
             <Link href="#">Flights</Link>
           </li>
 
-          <li className="hover:border-b-4  cursor-pointer border-[#5627FF] pb-6 hover:text-[#5627FF]">
+          <li className="hover:border-b-4 rounded-full  cursor-pointer border-[#5627FF] pb-5 hover:text-[#5627FF] transition-all duration-500">
             <Link href="#">Car Rentals</Link>
           </li>
-          <li className="hover:border-b-4  cursor-pointer border-[#5627FF] pb-6 hover:text-[#5627FF]">
+          <li className="hover:border-b-4  rounded-full cursor-pointer border-[#5627FF] pb-5 hover:text-[#5627FF] transition-all duration-500 ">
             <Link href="#">Events</Link>
           </li>
         </ul>
 
         <div className="flex  md:space-x-5">
-          <FlagDropDown />
-          <LanguageSelect />
-          <NgnDropDown />
-          {/* LogIn */}
-          <ButtonBorderBlue text="SignIn" />
-          {/* SignUp */}
-          <ButtonBlue text="SignUp" />
-          {/* Authenticated user profile image  on the nav */}
-          <div className="flex  items-center text-center mb-2">
-            <div className=" rounded-full p-4 bg-blue-400">
-              <Image src={hotelImage} width={20} height={20} alt="" />
-            </div>
-            <p>Solish OluwaSeun</p>
+          {/* input dropdown on the nav */}
+          <div className="hidden lg:flex items-center text-center mb-2">
+            <FlagDropDown />
+            <LanguageSelect />
+            <NgnDropDown />
+          </div>
 
+          <div className="flex  items-center text-center mb-2">
             <div className="  lg:flex  md:space-x-5">
-              <div className="hidden lg:flex">
-                <FlagDropDown />
-                <LanguageSelect />
-                <NgnDropDown />
-              </div>
               {/* LogIn */}
-              <div className="hidden lg:flex">
+              <div className="hidden lg:flex gap-2">
                 <ButtonBorderBlue text="SignIn" />
                 {/* SignUp */}
                 <ButtonBlue text="SignUp" />
                 {/* Authenticated user profile image  on the nav */}
                 <div className="hidden lg:flex  items-center text-center mb-2">
-                  <div className=" rounded-full p-4 bg-blue-400">
-                    <Image src={profile} width={20} height={20} alt="" />
+                  <div className=" rounded-full ">
+                    <Image
+                      src={profile}
+                      width={30}
+                      height={30}
+                      alt="profile image"
+                    />
                   </div>
-                  <p>Solish OluwaSeun</p>
+                  <p className="text-sm">Solish OluwaSeun</p>
                 </div>
               </div>
               <Menu

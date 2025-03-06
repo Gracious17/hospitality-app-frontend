@@ -70,7 +70,7 @@ export function PopularHotels() {
 
   return (
     <div className="w-full max-w-6xl mx-auto py-6">
-      <h2 className="text-xl font-semibold mb-5 text-gray-900 text-center">
+      <h2 className="text-xl font-semibold mb-5 text-gray-900 text-left">
         ⭐ Popular Hotels in Trending Destinations
       </h2>
 

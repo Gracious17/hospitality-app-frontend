@@ -1,8 +1,6 @@
 // lib/api.ts
 import axios from "axios";
-
-const API_URL = "https://findpeace.onrender.com/api/v1/hotels/index"; // Replace with actual API
-
+const API_URL = "https://findpeace.onrender.com/api/v1/hotels/index";
 export type Blog = {
   Id: string;
   Title: string;
@@ -39,5 +37,5 @@ export type HomepageData = {
 
 export const fetchHomepageData = async (): Promise<HomepageData> => {
   const response = await axios.get(API_URL);
-  return response.data.data; // Extract 'data' property
+  return response.data.data;
 };

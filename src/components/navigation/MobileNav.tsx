@@ -17,16 +17,16 @@ const MobileNav = ({ nav, closeNav }: props) => {
         className="w-[2rem] h-[2rem] absolute top-[2rem] text-black z-[220] right-[2rem] cursor-pointer"
       />
       <ul className="relative z-[201] space-y-10 flex flex-col justify-center h-[100%] items-center ">
-        <li className="text-[25px] cursor-pointer text-yellow-300">
+        <li className="text-[25px] cursor-pointer text-black hover:text-[#5627FF]">
           <Link href="#">Hotel</Link>
         </li>
-        <li className="text-[25px] cursor-pointer text-white hover:text-yellow-300 transition-all duration-200">
+        <li className="text-[25px] cursor-pointer text-black hover:text-[#5627FF] transition-all duration-200">
           <Link href="#">Flight</Link>
         </li>
-        <li className="text-[25px] cursor-pointer text-white hover:text-yellow-300 transition-all duration-200">
+        <li className="text-[25px] cursor-pointer text-black hover:text-[#5627FF] transition-all duration-200">
           <Link href="#">Car Rentals</Link>
         </li>
-        <li className="text-[25px] cursor-pointer text-white hover:text-yellow-300 transition-all duration-200">
+        <li className="text-[25px] cursor-pointer text-black hover:text-[#5627FF] transition-all duration-200">
           <Link href="#">Events</Link>
         </li>
       </ul>

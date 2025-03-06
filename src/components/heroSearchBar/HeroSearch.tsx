@@ -16,18 +16,18 @@ function HeroSearch() {
     }
   };
   return (
-    <div className="flex flex-wrap gap-2 bg-white p-4 rounded-lg shadow-md">
+    <div className="flex flex-row  flex-wrap  gap-2 bg-white p-4 rounded-lg shadow-md w-[100%] items-center text-center ">
       <div className="w-full sm:w-1/4">
         <LocationSearcher state={state} setState={setState} />
       </div>
-      <div className="w-full sm:w-1/4">
+      <div className="  sm:h-12">
         <DatePicker />
       </div>
-      <div className="w-full sm:w-1/4">
+      <div className="w-full sm:w-1/4 md:w-[150px]">
         <GuestRoomSelector />
       </div>
       <button
-        className="bg-[#5627FF] text-white p-2 rounded-md md:px-8  w-full sm:w-auto"
+        className="bg-[#5627FF] text-white p-2 rounded-md md:px-8 h-10  w-full sm:w-auto"
         onClick={handleSearch}
       >
         <span className="flex text-center items-center sm:justify-center">

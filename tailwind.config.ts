@@ -10,6 +10,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        pulseUp: {
+          "0%, 100%": { transform: "scale(1)", opacity: "0.3" },
+          "50%": { transform: "scale(1.5)", opacity: "1" },
+        },
+      },
+      animation: {
+        pulseUp: "pulseUp 1.2s infinite ease-in-out",
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

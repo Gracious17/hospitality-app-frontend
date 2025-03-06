@@ -12,7 +12,7 @@ const ImportantInfo = () => {
           <p className="font-semibold">You Need to Know</p>
           <div className=" space-y-2">
             <p>
-              Each person's charges may apply and vary depending on property
+              Each person&pos;s charges may apply and vary depending on property
               policy.
             </p>
             <p>

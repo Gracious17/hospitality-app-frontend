@@ -15,3 +15,18 @@ export type HotelType = {
   free: string;
   // Add other properties
 };
+
+export interface Hotel {
+  id: string;
+  name: string;
+  propertyType: string;
+  city: string;
+  state: string;
+  address: string;
+  rating: number;
+  averageRating: number;
+  amenities: string[];
+  pricePerNight: number;
+  images: string[];
+  reviews: number;
+}

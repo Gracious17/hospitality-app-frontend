@@ -126,11 +126,11 @@ export default function DatePicker() {
   const [openPopover, setOpenPopover] = React.useState(false);
 
   return (
-    <div className="flex flex-col sm:flex-wrap sm:flex-row gap-3 sm:gap-4">
+    <div className="flex flex-row sm:flex-wrap h-10 gap-3 md:gap-4">
       {/* Check-in Date Picker */}
       <Popover.Root open={openPopover} onOpenChange={setOpenPopover}>
         <Popover.Trigger asChild>
-          <button className="w-[50%] sm:w-40 flex items-center justify-between border px-4 py-2 rounded-md shadow-sm bg-white text-sm sm:text-base">
+          <button className="w-[50%] sm:w-40 flex items-center justify-between border px-4 py-1 rounded-md shadow-sm bg-white text-sm sm:text-base h-9">
             {checkIn ? format(checkIn, "EEE, MMM dd") : "Check-in"}
             <CalendarIcon className="w-5 h-5 text-gray-500" />
           </button>
@@ -153,7 +153,7 @@ export default function DatePicker() {
       {/* Check-out Date Picker */}
       <Popover.Root>
         <Popover.Trigger asChild>
-          <button className="w-full sm:w-40 flex items-center justify-between border px-4 py-2 rounded-md shadow-sm bg-white text-sm sm:text-base">
+          <button className="w-[50%] sm:w-40 flex items-center justify-between border px-4 py-1 rounded-md shadow-sm bg-white text-sm sm:text-base h-9">
             {checkOut ? format(checkOut, "EEE, MMM dd") : "Check-out"}
             <CalendarIcon className="w-5 h-5 text-gray-500" />
           </button>

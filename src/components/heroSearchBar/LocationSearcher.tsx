@@ -83,12 +83,7 @@ import {
 import { MapPin } from "lucide-react";
 import { useState } from "react";
 
-const locations = [
-  "Ogun, Nigeria",
-  "Lagos, Nigeria",
-  "Abuja, Nigeria",
-  "Kano, Nigeria",
-];
+const locations = ["Ogun", "Lagos", "Abuja", "Kano", "Edo"];
 
 export default function LocationSearch({
   state,
