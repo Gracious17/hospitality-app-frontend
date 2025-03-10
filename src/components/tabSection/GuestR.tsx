@@ -29,7 +29,18 @@ const reviews = [
       "The hotel is huge and there are many meetings held and the breakfast is great. The environment is also good, the sanitation is also very good, the facilities are very new, and it is also very close to tourist attractions. I will stay here again.",
   },
 ];
+type Guest = {
+  body: string;
+  country: string;
+  date: string;
+  name: string;
+  rating: number;
+  remark: string;
+};
 
+type props = {
+  guest: Guest;
+};
 const GuestReviews: React.FC = () => {
   return (
     <div className="mt-8 space-y-6">
@@ -57,7 +68,6 @@ const GuestReviews: React.FC = () => {
           </div>
 
           <div className="flex flex-col w-3/5">
-            {" "}
             {/* Rating & Title */}
             <div className="flex items-center justify-between ">
               <div className="flex items-center justify-between gap-2 mt-2">

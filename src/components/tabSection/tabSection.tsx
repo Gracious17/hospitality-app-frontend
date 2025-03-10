@@ -5,15 +5,14 @@ import GuestReviews from "@/components/tabSection/GuestReviews";
 import ServicesAndAmenities from "@/components/tabSection/ServicesAndAmenities";
 import Policies from "@/components/tabSection/Policies";
 
-const tabs = [
-  { name: "Rooms", component: <Rooms /> },
-  { name: "Guest Reviews", component: <GuestReviews /> },
-  { name: "Services and Amenities", component: <ServicesAndAmenities /> },
-  { name: "Policies", component: <Policies /> },
-];
-
 const TabSection = () => {
-  const [activeTab, setActiveTab] = useState(tabs[0].name);
+  const [activeTab, setActiveTab] = useState("rooms");
+  const tabs = [
+    { name: "Rooms", component: <Rooms /> },
+    { name: "Guest Reviews", component: <GuestReviews /> },
+    { name: "Services and Amenities", component: <ServicesAndAmenities /> },
+    { name: "Policies", component: <Policies /> },
+  ];
 
   return (
     <div className="space-y-6">

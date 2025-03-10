@@ -30,3 +30,49 @@ export interface Hotel {
   images: string[];
   reviews: number;
 }
+
+// Hotel details  types
+export type HotelDetail = {
+  id: string;
+  name: string;
+  city: string;
+  address: string;
+  rating: string;
+  amenities: string;
+  images: string;
+  description: string;
+};
+
+export type Policies = {
+  "check-in": string;
+  "check-out": string;
+  "allow-children": boolean;
+  "allow-pets": boolean;
+  "payments-available": string[];
+} | null;
+
+export type Review = {
+  user: string;
+  comment: string;
+  rating: number;
+};
+
+export type Room = {
+  id: string;
+  name: string;
+  type: string;
+  images: string;
+  amenities: string;
+  capacity: number;
+  "allow-smoking": boolean;
+  "room-size": string;
+  "price-per-night": number;
+};
+
+export type SimilarHotel = {
+  id: string;
+  name: string;
+  city: string;
+  "price-per-night": number;
+  images: string;
+};

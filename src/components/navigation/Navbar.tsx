@@ -12,6 +12,7 @@ import profile from "@/../public/profile.png";
 interface props {
   openNav: () => void;
 }
+
 const Navbar = ({ openNav }: props) => {
   return (
     // first nav

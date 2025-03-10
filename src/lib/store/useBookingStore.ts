@@ -1,75 +1,7 @@
 import { create } from "zustand";
 import { Hotel } from "@/types/types";
-interface BookingState {
-  selectedHotel: Hotel | null;
-  userDetails: { email: string; name: string; phone: string };
-  setHotel: (hotel: Hotel) => void;
-  setUserDetails: (details: {
-    email: string;
-    name: string;
-    phone: string;
-  }) => void;
-}
-
-export const useBookingStore = create<BookingState>((set) => ({
-  selectedHotel: null,
-  userDetails: { email: "", name: "", phone: "" },
-  setHotel: (hotel) => set({ selectedHotel: hotel }),
-  setUserDetails: (details) => set({ userDetails: details }),
-}));
-// interface Hotels {
-//   id: string;
-//   name: string;
-//   location: string;
-//   price: number;
-//   image: string;
-// }
-
-// interface Hotel {
-//   id: string;
-//   name: string;
-//   location: string;
-//   price: number;
-//   rating: number;
-//   image: string;
-// }
-
-// interface HotelStore {
-//   state: string;
-//   hotels: Hotel[];
-//   isLoading: boolean;
-//   error: string | null;
-//   setState: (state: string) => void;
-//   fetchHotels: () => Promise<void>;
-// }
 
 // const API_URL = "https://findpeace.onrender.com/api/v1/hotels/search";
-
-// export const useHotelStore = create<HotelStore>((set, get) => ({
-//   state: "",
-//   hotels: [],
-//   isLoading: false,
-//   error: null,
-
-//   setState: (state) => set({ state }),
-
-//   fetchHotels: async () => {
-//     const { state } = get();
-//     if (!state) return;
-
-//     set({ isLoading: true, error: null });
-
-//     try {
-//       const response = await fetch(`${API_URL}?state=${state}`);
-//       if (!response.ok) throw new Error("Failed to fetch hotels");
-
-//       const data: Hotel[] = await response.json();
-//       set({ hotels: data, isLoading: false });
-//     } catch (err) {
-//       set({ error: (err as Error).message, isLoading: false });
-//     }
-//   },
-// }));
 
 interface HotelStore {
   hotels: Hotel[];
@@ -122,4 +54,40 @@ export const useHotelStore = create<HotelStore>((set) => ({
       set({ hotels: [], error: (error as Error).message, loading: false });
     }
   },
+}));
+
+// Hotel details store
+
+import {
+  HotelDetail,
+  Policies,
+  Review,
+  Room,
+  SimilarHotel,
+} from "@/types/types";
+
+interface HotelDetailStore {
+  hotel: HotelDetail | null;
+  policies: Policies;
+  reviews: Review;
+  rooms: Room[];
+  similarHotels: SimilarHotel[];
+  setHotelData: (hotel: HotelDetail) => void;
+  setPolicies: (policies: Policies) => void;
+  setReviews: (review: Review) => void;
+  setRooms: (rooms: Room[]) => void;
+  setSimilarHotels: (similarHotels: SimilarHotel[]) => void;
+}
+
+export const useHotelDetailStore = create<HotelDetailStore>((set) => ({
+  hotel: null,
+  policies: null,
+  reviews: null,
+  rooms: [],
+  similarHotels: [],
+  setHotelData: (hotel) => set({ hotel }),
+  setPolicies: (policies) => set({ policies }),
+  setReviews: (reviews) => set({ reviews }),
+  setRooms: (rooms) => set({ rooms }),
+  setSimilarHotels: (similarHotels) => set({ similarHotels }),
 }));
