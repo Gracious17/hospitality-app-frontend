@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Lily_Script_One } from "next/font/google";
-import Footer from "@/components/footer/Footer";
-import Navbar from "@/components/navigation/Navbar";
-import Providers from "@/components/Providers"; // Import the new Providers component
+import Providers from "@/components/Providers";
+import LayoutWrapper from "@/components/navigation/LayoutWrapper"; // ✅ Client-side wrapper for path checks
 
 const lilyScript = Lily_Script_One({
   subsets: ["latin"],
@@ -18,18 +17,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body className={lilyScript.variable}>
         <Providers>
-          <Navbar />
-          {children}
-          <div className="bottom-0">
-            <Footer />
-          </div>
+          <LayoutWrapper>{children}</LayoutWrapper>{" "}
+          {/* ✅ Handles dynamic rendering */}
         </Providers>
       </body>
     </html>
